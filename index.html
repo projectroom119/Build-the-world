@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build The World</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Full Page Styling */
+      body,
+      html {
+        height: 100%;
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+
+      /* Loader Styling */
+      .loader-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .loader {
+        border: 6px solid #f3f3f3; /* Light grey */
+        border-top: 6px solid #4285f4; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Main Container Styling */
+      .container {
+        display: none;
+        text-align: center;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* No Internet Box */
+      .no-internet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* Dinosaur Image */
+      .dinosaur img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      /* Heading */
+      h1 {
+        font-size: 26px;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+
+      /* Message Text */
+      .message {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      /* Reload Button */
+      .reload-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #4285f4;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .reload-btn:hover {
+        background-color: #357ae8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <!-- No Internet Content -->
+    <div class="container">
+      <div class="no-internet">
+        <!-- Dinosaur Icon -->
+        <div class="dinosaur">
+          <img
+            src="https://banner2.cleanpng.com/20180704/xps/aaxs2ustp.webp"
+            alt="dinosaur"
+          />
+        </div>
+        <!-- No Internet Heading -->
+        <h1>No internet</h1>
+        <!-- Message -->
+        <p class="message">You are not connected to the internet.</p>
+        <!-- Reload Button -->
+        <a
+          href="https://prosecutorremarkablegodforsaken.com/y1p7zevq8?key=58c04364f6af0ee82461b6efa3da59e1"
+        >
+          <button class="reload-btn" onclick="window.location.reload();">
+            Try Again
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      // Wait for 3 seconds, then show the "No Internet" page and hide the loader
+      setTimeout(() => {
+        document.querySelector(".loader-container").style.display = "none";
+        document.querySelector(".container").style.display = "block";
+      }, 5000);
+    </script>
+  </body>
+</html>
